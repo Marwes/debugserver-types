@@ -1,0 +1,17 @@
+[package]
+name = "debugserver-types"
+version = "0.1.0"
+authors = ["Markus Westerlind <marwes91@gmail.com>"]
+
+build = "build.rs"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+serde = "0.8"
+serde_json = "0.8"
+serde_derive = "0.8"
+
+[build-dependencies]
+json-schema = { git = "https://github.com/Marwes/json-schema" }
