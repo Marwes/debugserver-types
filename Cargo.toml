@@ -14,4 +14,4 @@ serde_json = "0.8"
 serde_derive = "0.8"
 
 [build-dependencies]
-json-schema = { git = "https://github.com/Marwes/json-schema" }
+schemafy = { git = "https://github.com/Marwes/schemafy" }

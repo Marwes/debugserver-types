@@ -1,4 +1,4 @@
-extern crate json_schema;
+extern crate schemafy;
 
 use std::fs::File;
 use std::io::{Read, Write};
@@ -13,7 +13,7 @@ fn main() {
     let mut input = String::new();
     file.read_to_string(&mut input).unwrap();
 
-    let output = json_schema::generate(None, &input).unwrap();
+    let output = schemafy::generate(None, &input).unwrap();
     let dst = Path::new("src/lib.rs");
 
     let mut file = File::create(dst).unwrap();
