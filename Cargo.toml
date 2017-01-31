@@ -1,9 +1,16 @@
 [package]
 name = "debugserver-types"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Markus Westerlind <marwes91@gmail.com>"]
 
 build = "build.rs"
+
+description = "Type definitions for Visual Code's debug server."
+
+license = "MIT"
+
+repository = "https://github.com/Marwes/debugserver-types"
+documentation = "https://docs.rs/debugserver-types"
 
 [lib]
 path = "src/lib.rs"
