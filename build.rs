@@ -18,8 +18,6 @@ fn main() {
 
     let mut file = File::create(dst).unwrap();
     file.write_all(br#"
-#![feature(proc_macro)]
-
 #[macro_use]
 extern crate serde_derive;
 extern crate serde_json;

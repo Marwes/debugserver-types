@@ -9,9 +9,9 @@ build = "build.rs"
 path = "src/lib.rs"
 
 [dependencies]
-serde = "0.8"
-serde_json = "0.8"
-serde_derive = "0.8"
+serde = "0.9"
+serde_json = "0.9"
+serde_derive = "0.9"
 
 [build-dependencies]
-schemafy = "0.1.1"
+schemafy = "0.2.0"
