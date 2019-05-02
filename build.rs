@@ -1,5 +1,6 @@
 extern crate schemafy;
 
+use std::env;
 use std::fs::File;
 use std::io::{Read, Write};
 use std::path::Path;
@@ -14,16 +15,18 @@ fn main() {
     file.read_to_string(&mut input).unwrap();
 
     let output = schemafy::generate(None, &input).unwrap();
-    let dst = Path::new("src/lib.rs");
+    let dst = Path::new(&env::var("OUT_DIR").unwrap()).join("lib.rs");
 
     let mut file = File::create(dst).unwrap();
-    file.write_all(br#"
+    file.write_all(
+        br#"
 #[macro_use]
 extern crate serde_derive;
 extern crate serde_json;
 extern crate serde;
 
-"#)
-        .unwrap();
+"#,
+    )
+    .unwrap();
     file.write_all(output.as_bytes()).unwrap();
 }
