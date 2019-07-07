@@ -1,1 +1,3 @@
-include!(concat!(env!("OUT_DIR"), "/lib.rs"));
+use serde::{Deserialize, Serialize};
+
+schemafy::schemafy!("src/schema.json");
